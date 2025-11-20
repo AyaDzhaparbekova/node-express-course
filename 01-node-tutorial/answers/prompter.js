@@ -22,16 +22,21 @@ const getBody = (req, callback) => {
 
 // here, you could declare one or more variables to store what comes back from the form.
 let item = "Enter something below.";
+let secret = Math.floor(Math.random() * 100) + 1; 
+
+
 
 // here, you can change the form below to modify the input fields and what is displayed.
 // This is just ordinary html with string interpolation.
 const form = () => {
   return `
-  <body>
+   <body style="background-color: purple;">
   <p>${item}</p>
+  <p>Secret number: ${secret}</p>
   <form method="POST">
   <input name="item"></input>
   <button type="submit">Submit</button>
+
   </form>
   </body>
   `;
