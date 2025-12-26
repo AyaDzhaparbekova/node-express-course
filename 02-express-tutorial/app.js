@@ -17,24 +17,6 @@ app.use(express.json());
 const peopleRouter = require('./routes/people');
 
 
-// app.get('/', (req, res) => res.send('Home'));
-// app.get('/api/v1/people', (req, res) => {
-//   res.json(people);
-// });
-
-// app.post('/api/v1/people', (req, res) => {
-//   if (!req.body.name) {
-//     return res
-//       .status(400)
-//       .json({ success: false, message: 'Please provide a name' });
-//   }
-
-//   people.push({ id: people.length + 1, name: req.body.name });
-
-//   res.status(201).json({ success: true, name: req.body.name });
-// });
-
-
 app.get('/api/v1/test', (req, res) => {
   res.json({ message: 'This is a test API', status: 'success' });
 });
@@ -87,6 +69,6 @@ app.use((req, res) => {
   res.status(404).send('Page not found');
 });
 
-app.listen(3001, () => {
-  console.log('Server is running on port 3001...');
+app.listen(3000, () => {
+  console.log('Server is running on port 3000...');
 });
