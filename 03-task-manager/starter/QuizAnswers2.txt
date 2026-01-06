@@ -1,0 +1,3 @@
+1. In few words: I use asyncWrapper to avoid writing (try,catch) - which is not comftable and repeatable. asyncWrapper - accepts async function and automatically catches any type of the errors and passes to the next and middleware.
+
+2. When the task is not found, we create a custom error with a 404 status code and pass it to next. This allows the error-handling middleware to send both the status code and the error message back to the user.
