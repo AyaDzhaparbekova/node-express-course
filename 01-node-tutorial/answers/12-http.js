@@ -15,6 +15,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(5001);
-
-//  my port is different from the example to avoid conflicts
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000...');
+});
